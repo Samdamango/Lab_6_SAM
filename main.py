@@ -3,7 +3,7 @@
 def encode(password_to_encode):
     empty_string = ''
     for i in range(len(password_to_encode)):
-        add_encode = int(password_to_encode[i]) + 3
+        add_encode = (int(password_to_encode[i]) + 3) % 10
         empty_string += str(add_encode)
 
 
@@ -14,7 +14,7 @@ def encode(password_to_encode):
 def decode(password):
     decoded_key = ''
     for i in range(len(password)):
-        altered_digit = int(password[i]) - 3
+        altered_digit = (int(password[i]) - 3) % 10
         decoded_key += str(altered_digit)
     return decoded_key
 
