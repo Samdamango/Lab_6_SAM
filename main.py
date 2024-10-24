@@ -1,7 +1,13 @@
+#Name: Samuel Arango
+
 def encode(password_to_encode):
+    empty_string = ''
     for i in range(len(password_to_encode)):
         add_encode = int(password_to_encode[i]) + 3
+        empty_string += str(add_encode)
 
+
+    return empty_string
 
 
 if __name__ == '__main__':
@@ -16,7 +22,6 @@ if __name__ == '__main__':
         if user_input == 1:
             password_to_encode = str(input("Please enter your password to encode: "))
             encoded_password = encode(password_to_encode)
-            #make encode function and encode it
             print("Your password has been encoded and stored!")
         elif user_input == 2:
             print(f"The encoded password is {encoded_password}, and the original password is {password_to_encode}")
