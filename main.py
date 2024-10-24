@@ -9,6 +9,8 @@ def encode(password_to_encode):
 
     return empty_string
 
+# Thomas McLaughlin's decode function
+
 def decode(password):
     decoded_key = ''
     for i in range(len(password)):
